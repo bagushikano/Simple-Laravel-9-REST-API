@@ -16,6 +16,15 @@ class MerekController extends Controller
         ], 200);
     }
 
+    public function getPaginated() {
+        return response()->json([
+            'statusCode' => 200,
+            'status' => true,
+            'merekProdukList' => Merek::paginate(3),
+            'message' => 'Data merek'
+        ], 200);
+    }
+
     public function detail($id) {
         return response()->json([
             'statusCode' => 200,

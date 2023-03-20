@@ -29,6 +29,10 @@ Route::group(['prefix' => 'merek'], function () {
     Route::get('/detail/{id}', [MerekController::class, 'detail']);
     Route::post('/update/{id}', [MerekController::class, 'update']);
     Route::get('/delete/{id}', [MerekController::class, 'delete']);
+
+
+    Route::get('/get/paginated', [MerekController::class, 'getPaginated']);
+
 });
 
 Route::group(['prefix' => 'produk'], function () {
